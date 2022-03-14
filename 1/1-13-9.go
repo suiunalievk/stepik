@@ -1,18 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-	var a int
+	var a, b, count int
+	var max = math.MaxInt64
 	fmt.Scan(&a)
-	arr := make([]int, a)
-	a = 0
-	for i := range arr {
-		fmt.Scan(&arr[i])
 
-		if arr[i] > 0 {
-			a++
+	for i := 0; i < a; i++ {
+		fmt.Scan(&b)
+		if b < max {
+			max = b
+			count = 1
+		} else if b == max {
+			count++
 		}
 	}
-	fmt.Printf("%d", a)
+
+	fmt.Printf("%d", count)
 }
