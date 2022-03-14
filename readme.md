@@ -1,1 +1,1 @@
-Stepik Golang course (https://stepik.org/course/54403) solved test 
+My solutions for Stepik Golang course (https://stepik.org/course/54403)
