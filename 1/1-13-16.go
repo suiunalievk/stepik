@@ -1,9 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
-	var a int
-	fmt.Scan(&a)
-	fmt.Println((a/100 + a/10%10 + a%10))
+	var a, b string
+	fmt.Scan(&a, &b)
+
+	fmt.Println(strings.ReplaceAll(a, b, ""))
 }

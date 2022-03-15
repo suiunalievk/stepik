@@ -3,16 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	var a int
+	var a, b int
 	fmt.Scan(&a)
-	arr := make([]int, a)
-	a = 0
-	for i := range arr {
-		fmt.Scan(&arr[i])
 
-		if arr[i] > 0 {
-			a++
+	for fmt.Scan(&b); b >= a; b-- {
+		if b%7 == 0 {
+			fmt.Printf("%d", b)
+			break
+		} else if b == a {
+			fmt.Println("NO")
 		}
 	}
-	fmt.Printf("%d", a)
 }
