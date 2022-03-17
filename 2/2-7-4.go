@@ -2,12 +2,17 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 func main() {
-	var a, b float64
-	fmt.Scan(&a, &b)
+	var a string
+	var b byte
+	fmt.Scan(&a)
 
-	fmt.Println(math.Sqrt(a*a + b*b))
+	for i := range a {
+		if a[i] > b {
+			b = a[i]
+		}
+	}
+	fmt.Println(int(b - '0'))
 }

@@ -2,12 +2,15 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 func main() {
-	var a, b float64
-	fmt.Scan(&a, &b)
+	var a, b string
+	var c int32
+	fmt.Scan(&a)
 
-	fmt.Println(math.Sqrt(a*a + b*b))
+	for _, val := range a {
+		c = (val - 48) * (val - 48)
+	}
+	fmt.Println(c, " ", b)
 }
