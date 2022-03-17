@@ -10,7 +10,10 @@ func main() {
 	var text, output string
 	output = "Ok"
 
-	fmt.Scan(&text)
+	scan, err := fmt.Scan(&text)
+	if err != nil {
+		return
+	}
 
 	myRune := []rune(text)
 
