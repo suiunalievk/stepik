@@ -5,9 +5,21 @@ import (
 	"math"
 )
 
-func main() {
-	var a, b float64
-	fmt.Scan(&a, &b)
+var p, v, k float64 = 6.0, 6.0, 1296.0
 
-	fmt.Println(math.Sqrt(a*a + b*b))
+func T() float64 {
+	return 6 / W()
+}
+
+func W() float64 {
+	return math.Sqrt(k / M())
+}
+
+func M() float64 {
+	return p * v
+}
+
+func main() {
+	T()
+	fmt.Println(T())
 }
