@@ -1,23 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
-func divide(a, b int) (int, string) {
+func divide(a, b int) (int, error) {
 	if b == 0 {
-		return 0, "division by zero!"
+		return 0, errors.New("division by zero!")
 	}
-	return a / b, ""
+	return a / b, nil
 }
 
 func main() {
 	var a, b int
 	fmt.Scan(&a, &b)
 
-	res, _ := divide(a, b)
+	res, err := divide(a, b)
 
-	//if err != nil {
-	//	fmt.Println("ошибка")
-	//	return
-	//}
+	if err != nil {
+		fmt.Println("ошибка")
+		return
+	}
 	fmt.Println(res)
 }
