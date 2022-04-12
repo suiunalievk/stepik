@@ -3,7 +3,6 @@ package main
 import "fmt"
 
 func main() {
-	// a:=44
 
 	var a2 = 10
 

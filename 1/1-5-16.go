@@ -9,5 +9,5 @@ func main() {
 	fmt.Scan(&a) // считаем переменную 'a' с консоли
 	hours = a / 30
 	minutes = a % 30 * 2
-	fmt.Println("It is", hours, "hours", minutes, "minutes.")
+	fmt.Printf("It is %d hours %d minutes.", hours, minutes)
 }
